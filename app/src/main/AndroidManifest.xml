@@ -17,8 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginScreen">
-        android:parentActivityName=".WelcomeScreen"
-        </activity >
+            android:parentActivityName=".WelcomeScreen"
+        </activity>
+        <activity android:name=".LoggedInScreen"></activity>
     </application>
 
 </manifest>
