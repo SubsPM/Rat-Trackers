@@ -20,7 +20,7 @@ public class DetailedInformation extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);
 
         String[] line = LoggedInScreen.lista.get(position).split(",");
-        String addLine = "Date: " + line[1] + "\nAgency: " + line[3] +  "\nLocation: " + line[7];
+        String addLine = "\nUnique Key: " + line[0] +"\nCreated Date: " + line[1] + "\nAgency: " + line[3] +  "\nLocation Type: " + line[7] +  "\nIncident Zip: " + line[8] +  "\nIncident Address: " + line[9] +  "\nCity: " + line[15] +  "\nBorough: " + line[22] +  "\nLatitude: " + line[31] +  "\nLongitude: " + line[32];
 
         textView.setText(addLine);
 
