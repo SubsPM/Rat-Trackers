@@ -1,8 +1,11 @@
 package com.example.fredrik.rattrackers;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 import android.view.View;
@@ -16,6 +19,16 @@ public class LoggedInScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in_screen);
         logOutButton = (Button) findViewById(R.id.logOutButton);
+
+
+        // TodoDatabaseHandler is a SQLiteOpenHelper class connecting to SQLite
+        TodoDatabaseHandler handler = new TodoDatabaseHandler(this);
+        // Get access to the underlying writeable database
+        SQLiteDatabase db = handler.getWritableDatabase();
+        // Query for items from the database and get a cursor back
+        Cursor todoCursor = db.rawQuery("SELECT  * FROM RatData.db", null);
+
+        Log.i("City", todoCursor.getString(todoCursor.getColumnIndexOrThrow("City")));
 
         logOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
