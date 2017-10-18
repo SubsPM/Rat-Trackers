@@ -19,7 +19,9 @@
         <activity android:name=".LoginScreen">
             android:parentActivityName=".WelcomeScreen"
         </activity>
-        <activity android:name=".LoggedInScreen"></activity>
+        <activity android:name=".LoggedInScreen" />
+        <activity android:name=".DisplayRatList" />
+        <activity android:name=".DetailedInformation"></activity>
     </application>
 
 </manifest>
