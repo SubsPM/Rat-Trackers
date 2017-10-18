@@ -27,11 +27,11 @@ public class DisplayRatList extends AppCompatActivity {
         for(int i = 0; i < 100;i++){
             if (i != 0) {
                 String[] line = LoggedInScreen.lista.get(i).split(",");
-                String addLine = "Date: " + line[1] + "\tLocation: " + line[7];
+                String addLine = "Unique Key: " + line[0] + "\nCity: " + line[16];
                 temp.add(addLine);
             }else{
                 String[] line = LoggedInScreen.lista.get(i).split(",");
-                String addLine = "Date: " + "\tLocation: ";
+                String addLine = "Unique Key,  " + "\tCity ";
                 temp.add(addLine);
             }
 
